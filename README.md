@@ -1,13 +1,14 @@
-# Instruments transformer
-
-The goal of the model is to transpose a sound file of an instrument, to another instrument.
-The initiation project focus on classical guitar and piano.
+# General study on music
+The goal of this repository is to study different model of deep learning in the musical area.
+It focus on two subjects: the classification of piano composer, and the classification of music instruments.
 
 # Dataset
-The dataset is gather from Youtube: around 10h of music, cut in 1s lenght wav sample.
+Two datasets were used for this project:
+The first was create from youtube videos of five piano composers.
+The second came from the website https://www.upf.edu/web/mtg/irmas, and came with an article on instrumant recognition.
 
 # Pre-processing
-
+Preprocessing is a bit tricky, as it concerns audio files. Audio can have multiple representation, 
 
 
 # Model
