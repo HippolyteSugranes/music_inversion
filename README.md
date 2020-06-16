@@ -22,8 +22,12 @@ However, data has a time axis, and the evolution, in time, of the frequencies sh
 The output is then flatten, and go throught a full connected neural network to perform classification.
 
 # Notebook:
-collect.ipynb: Download of the youtube music, and conversion to jpg file
-gcp_preprocessing.ipynb: Download of the .wav file from a GCP bucket, and conversion of the wav to npy, matrix object
-vizualization.ipynb: Generic vizualisation of an audio file, with STFT example
-instruments_classifier.ipynb: final preprocessing, model training, model saving/loading and results evaluation of the generic model on an instrument classifier
-composer_classifier.ipynb: final preprocessing, model training, model saving/loading and results evaluation of the generic model on an instrument classifier
+collect.ipynb: Download of the youtube music, and conversion to jpg file. (Can be use as is)
+
+gcp_preprocessing.ipynb: Download of the .wav file from a GCP bucket, and conversion of the wav to npy, matrix object (used on gcp, data shall be downloaded before, and put in a buckets. After that, folders names shall be change to run the script)
+
+vizualization.ipynb: Generic vizualisation of an audio file, with STFT example (Can be use as is, two example files are in the folder example_files)
+
+instruments_classifier.ipynb: final preprocessing, model training, model saving/loading and results evaluation of the generic model on an instrument classifier (data must be downloaded before, and change folders name to run the script)
+
+composers_classifier.ipynb: final preprocessing, model training, model saving/loading and results evaluation of the generic model on an instrument classifier (data must be downloaded before, and change folders name to run the script)
