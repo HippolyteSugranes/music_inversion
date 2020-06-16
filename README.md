@@ -12,7 +12,7 @@ The second came from the website https://www.upf.edu/web/mtg/irmas, and came wit
 Preprocessing is a bit tricky, as it concerns audio files. Audio can have multiple representation, some of them can be found in the notebook "data_vizualization". In the litterature, the Fourier Short Term Transform (https://en.wikipedia.org/wiki/Short-time_Fourier_transform, STFT) is the most used for this kind of analysis. It is a succession of Fourier Transform on small time windows to get the successives frequencies distributions in this time windows. The most important parameter is the width of this time window, as it impacts the time precision, and the frequency precision (see more details in the link above).
 Librosa library give the possibility to those transformation.
 
-Two way of storage were tested, jpg and npy. Jpg give a compressed image of the Fourier Transform, which reduce the size of storage needed. Files was small enough to be used on Google Collaboratory Notebook. However the compression implies a loss of information. Therefore the .npy object, which are basically the storage of the numpy array representation of the STFT is choosen. I used Google Cloud Platform for running the deep learning model.
+Two ways of storage were tested, jpg and npy. Jpg give a compressed image of the Fourier Transform, which reduce the size of storage needed. Files was small enough to be used on Google Collaboratory Notebook. However the compression implies a loss of information. Therefore the .npy object, which are basically the storage of the numpy array representation of the STFT is choosen. I used Google Cloud Platform for running the deep learning model.
 
 
 
