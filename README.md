@@ -14,23 +14,13 @@ Librosa library give the possibility to those transformation.
 
 Two ways of storage were tested, jpg and npy. Jpg give a compressed image of the Fourier Transform, which reduce the size of storage needed. Files was small enough to be used on Google Collaboratory Notebook. However the compression implies a loss of information. Therefore the .npy object, which are basically the storage of the numpy array representation of the STFT is choosen. I used Google Cloud Platform for running the deep learning model.
 
+# Models
+I use the same global structure for the two analysis (composers classifier, and instruments classifier). A first set of convolutional layers, to extract information off the STFT matrix. Convolution layer are the most efficient way to analyse image, and by expansion our STFT matrix distribution.
 
+However, STFT can also be seen as a time series, as it is successive Fourier Transform on time windows. Therefore, after a dimension reduction, thanks to the convolutional layers, I use a LSTM layer, which is one of the most efficient layer for time series analysis.
 
-# Model
+The output is then flatten, and go throught a full connected neural network two perform classification.
 
-
-The structure chosen is the LSTM auto-encoder (See articles below for further details).
-The global structure is:
-Encoder:  1. LSTM layer (N units + param1)
-          2. LSTM layer (M units + param2)
-          
-Decoder:  3. RepeatVector layer
-          4. LSTM layer (M units + param2)
-          5. LSTM layer (N units + param1)
-          6. TimeDistributed Dense layer
-
-The RepeatVector layer is need to get the correct shape for the decoder
-The Time Distributed layer permit to get our initial structure.
 
 
 # Source of interest
